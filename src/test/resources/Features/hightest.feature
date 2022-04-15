@@ -9,6 +9,6 @@ Feature: Submit ISTQB foundation quizz
     When I complete the quiz
     And I enter my mail
     And I navigate to "https://yopmail.com"
-    And I check my emails
+    And I login to my email
     Then I can check my results
-    And I got "100%" correct answers
+    And I got "100"% correct answers

@@ -1,1 +1,11 @@
-Base\Driver.class
+pages\HighTestHomePage.class
+Steps\NavigateSteps.class
+Steps\QuizSteps.class
+pages\ToolboxPage.class
+pages\YopmailPage.class
+TestBase\DriverSingleton.class
+pages\QuizPage.class
+Steps\HighTestStepsHPSteps.class
+Steps\ToolboxSteps.class
+TestBase\TestRunner.class
+Steps\YopmailSteps.class
