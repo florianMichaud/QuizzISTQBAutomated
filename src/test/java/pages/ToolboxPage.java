@@ -21,9 +21,9 @@ public class ToolboxPage {
 		WebElement quizzTitle = driver.findElement(By.xpath(quizzTitleXpath));
 		
 		jsExecutor.executeScript("arguments[0].scrollIntoView();", quizzTitle);
-		String xpathSelector2 = quizzTitleXpath + "/following::div/a[contains(text(),'"+language+"')]";
+		String xpathSelectorLanguage = quizzTitleXpath + "/following::div/a[contains(text(),'"+language+"')]";
 		
-		WebElement french = driver.findElement(By.xpath(xpathSelector2));
+		WebElement french = driver.findElement(By.xpath(xpathSelectorLanguage));
 		jsExecutor.executeScript("window.scrollTo(0, 0);", "");	
 		jsExecutor.executeScript("window.scrollTo(0,750);", "");
 		french.click();		
