@@ -56,5 +56,6 @@ public class YopmailPage {
 	public void getResults(String correctAnswersExpected) {
 		int correctAnswersExpectedInteger = Integer.parseInt(correctAnswersExpected);
 		String xpathResults = "//div[@id='mail']//div[contains(text(),'"+correctAnswersExpectedInteger+"%')]";
+		driver.findElement(By.xpath(xpathResults));
 	}
 }
