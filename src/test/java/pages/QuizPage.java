@@ -2,16 +2,20 @@ package pages;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import utils.JsonPropertiesFileUtils;
 
 public class QuizPage {
 	private WebDriver driver;
@@ -58,7 +62,13 @@ public class QuizPage {
 	
 	public void sendsResultsByMail() {
 		WebElement mailInput = driver.findElement(By.id("email"));
-		mailInput.sendKeys("testisqtb@yopmail.com");
+		//mailInput.sendKeys("testisqtb@yopmail.com");
+		try {
+			mailInput.sendKeys(JsonPropertiesFileUtils.getProperty("email"));
+		} catch (IOException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		WebElement submitMail = driver.findElement(By.id("submitMail"));
 		assertTrue(submitMail.isDisplayed());
